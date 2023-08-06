@@ -167,7 +167,7 @@ class GoogleOneTapSignInPlugin: FlutterPlugin, MethodCallHandler, MethodContract
               it.success("{\"credential\":\"$credential\", \"id_token\":\"$idToken\",\"username\":\"$username\",\"password\":\"$password\",\"display_name\":\"$displayName\",\"google_id_token\":\"$googleIdToken\",\"id\":\"$id\"}")
               return true
             } catch (e: ApiException) {
-              Log.d(DAEWU, "~~~~ !! ONE TAP ApiException !! ~~~~")
+              Log.d(DAEWU, "~~~~ !! ONE TAP ApiException !! ${e} ~~~~")
               it.success(null)
               return false
             }
